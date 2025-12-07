@@ -1,14 +1,23 @@
+// ===== Matrix Background =====
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
 document.body.appendChild(canvas);
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+resize();
+window.addEventListener("resize", resize);
+window.addEventListener("orientationchange", () => {
+  setTimeout(resize, 300);
+});
 
 const chars = "01";
 const fontSize = 18;
-const columns = canvas.width / fontSize;
-const drops = Array(Math.floor(columns)).fill(1);
+let columns = canvas.width / fontSize;
+let drops = Array(Math.floor(columns)).fill(1);
 
 function draw() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.06)";
@@ -21,22 +30,21 @@ function draw() {
     const text = chars[Math.floor(Math.random() * chars.length)];
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-    if (Math.random() > 0.95) drops[i] = 0;
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+      drops[i] = 0;
+    }
     drops[i]++;
   }
 }
 
 setInterval(draw, 40);
 
-window.addEventListener("orientationchange", () => {
-  setTimeout(() => resize(), 300);
-});
-
+// ===== Typing Animation (only on pages with #terminal) =====
 const lines = [
   "> Initializing SDR stack...",
   "> Verifying BTS broadcast frames...",
   "> SOC threat engine online...",
-  "> ACCESS GRANTED :: PURNENDRA_JANGID"
+  "<span class='access'>> ACCESS GRANTED :: PURNENDRA_JANGID</span>"
 ];
 
 let currentLine = 0;
@@ -44,21 +52,4 @@ let charIndex = 0;
 const speed = 55;  // typing speed
 
 function typeLine() {
-  if (currentLine < lines.length) {
-    const terminal = document.getElementById("terminal");
-    terminal.innerHTML = lines.slice(0, currentLine).join("<br>") + "<br>" +
-      lines[currentLine].substring(0, charIndex);
-
-    charIndex++;
-
-    if (charIndex <= lines[currentLine].length) {
-      setTimeout(typeLine, speed);
-    } else {
-      currentLine++;
-      charIndex = 0;
-      setTimeout(typeLine, 600);  // pause per line
-    }
-  }
-}
-
-window.onload = typeLine;
+  const termina

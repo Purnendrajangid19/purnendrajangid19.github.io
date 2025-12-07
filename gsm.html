@@ -2,22 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GSM Research | Purnendra</title>
+  <title>GSM Research | Purnendra Jangid</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="terminal">
     <h2>> GSM Signal Analysis & SDR Capture</h2>
     <p>
-      Research on GSM broadcast channels using RTL-SDR Blog V4, GR-GSM and Gqrx.
-      This section will include spectrum waterfalls, BCCH decode samples,
-      ARFCN mapping and encryption posture (A5/x) analysis with all subscriber
-      identifiers safely redacted.
+      Independent research on real-world GSM networks using RTL-SDR Blog V4 and
+      open-source tooling such as GR-GSM, Gqrx and Wireshark. All captures are
+      performed in a lab/controlled environment with subscriber identifiers
+      fully redacted.
     </p>
   </div>
 
+  <div class="wrapper">
+
+    <div class="card">
+      <div class="card-title">Broadcast Channel (BCCH) Mapping</div>
+      <div class="card-meta">Tools: RTL-SDR V4, Gqrx, GR-GSM</div>
+      <p>
+        Captured downlink spectrum and identified active ARFCNs. Decoded BCCH
+        bursts to enumerate cell IDs, LACs and broadcast parameters.
+      </p>
+      <p>
+        Focused on security-relevant fields such as ciphering indicators, network
+        feature flags and handover configurations.
+      </p>
+      <span class="tag">ARFCN</span>
+      <span class="tag">BCCH</span>
+      <span class="tag">GSM900</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Encryption Posture Review</div>
+      <div class="card-meta">A5/x cipher usage observation</div>
+      <p>
+        Analysed system information messages to determine whether the operator
+        permits unencrypted traffic or weak ciphers. Documented where A5/0 or
+        legacy configurations are still allowed, increasing risk to subscribers.
+      </p>
+      <span class="tag">A5/0</span>
+      <span class="tag">A5/1</span>
+      <span class="tag">Network Hardening</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">GSM → SOC Correlation Ideas</div>
+      <div class="card-meta">Bridging telecom RF with blue-team monitoring</div>
+      <p>
+        Exploring how SDR-derived indicators (suspicious BTS behaviour, rogue
+        cell parameters) could be translated into telemetry consumable by SIEM /
+        SOC pipelines for detecting potential IMSI-catchers or fake BTS activity.
+      </p>
+      <span class="tag">SDR</span>
+      <span class="tag">Threat Hunting</span>
+      <span class="tag">Telecom Security</span>
+    </div>
+
+  </div>
+
   <nav class="nav">
-    <a href="index.html">Back to Console</a>
+    <a href="index.html">← Back to Console</a>
   </nav>
 
   <script src="script.js"></script>

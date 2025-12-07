@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Top GSM intro block -->
   <div class="terminal">
     <h2>> GSM Signal Analysis & SDR Capture</h2>
 
@@ -36,8 +37,10 @@
     </p>
   </div>
 
+  <!-- Cards / extra sections -->
   <div class="wrapper">
-    <!-- 🔗 Research notes page -->
+
+    <!-- Full GSM notes site -->
     <div class="card">
       <div class="card-title">📓 Full GSM Research Notes (Live Site)</div>
       <div class="card-meta">All experiments · logs · diagrams</div>
@@ -55,7 +58,7 @@
       <span class="tag">Documentation</span>
     </div>
 
-    <!-- 🧬 GitHub repo card -->
+    <!-- GitHub repo card -->
     <div class="card">
       <div class="card-title">📡 GSM-Research Repository</div>
       <div class="card-meta">GitHub · RTL-SDR · GR-GSM · Telecom Security</div>
@@ -69,4 +72,64 @@
         </a>
       </p>
       <p>
-        The repository incl
+        The repository includes BCCH decode utilities, ARFCN mapping data and
+        SDR experiment documentation (with sensitive identifiers removed).
+      </p>
+      <p>
+        <!-- Live GitHub badges -->
+        <img src="https://img.shields.io/github/stars/Purnendrajangid19/GSM-Research?style=flat&color=00ff9e">
+        <img src="https://img.shields.io/github/forks/Purnendrajangid19/GSM-Research?style=flat&color=00e1ff">
+        <img src="https://img.shields.io/github/last-commit/Purnendrajangid19/GSM-Research?style=flat&color=ff00ff">
+      </p>
+      <span class="tag">Open Source</span>
+      <span class="tag">Research Repo</span>
+    </div>
+
+    <!-- Google Docs research paper link -->
+    <div class="card">
+      <div class="card-title">📄 GSM Security Deep-Dive Research</div>
+      <div class="card-meta">Personal research report · GSM encryption · SDR capture analysis</div>
+
+      <p>
+        This paper documents captured GSM broadcast traffic, ARFCN mapping,
+        BCCH decode signals, ciphering posture (A5/0, A5/1, A5/3) and threat
+        implications for subscriber privacy and rogue BTS detection.
+      </p>
+
+      <p>
+        👉 <a href="https://docs.google.com/document/d/1V8PA1Xyu7-lAdJwosDkAmZg17EfayIDyy2aLlbDldBk/edit?usp=sharing"
+              target="_blank">
+          Open Full GSM Research Report (Google Docs)
+        </a>
+      </p>
+
+      <span class="tag">GSM Cryptography</span>
+      <span class="tag">BCCH Decode</span>
+      <span class="tag">ARFCN Mapping</span>
+      <span class="tag">SDR Capture</span>
+    </div>
+
+    <!-- Embedded preview of the Google Doc -->
+    <div class="card">
+      <div class="card-title">🔍 Inline Preview – GSM Threat & SDR Analysis</div>
+      <p>
+        Embedded preview of the main GSM research report. For best readability
+        use desktop or rotate your device in landscape mode.
+      </p>
+
+      <iframe
+        src="https://docs.google.com/document/d/1V8PA1Xyu7-lAdJwosDkAmZg17EfayIDyy2aLlbDldBk/preview"
+        class="doc-frame">
+      </iframe>
+    </div>
+
+  </div>
+
+  <!-- Back nav -->
+  <nav class="nav">
+    <a href="index.html">&lt; Back to Console</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

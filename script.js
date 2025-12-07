@@ -27,3 +27,8 @@ function draw() {
 }
 
 setInterval(draw, 40);
+
+window.addEventListener("orientationchange", () => {
+  setTimeout(() => resize(), 300);
+});
+

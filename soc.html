@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SOC Casework | Purnendra Jangid</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>SOC Operations | Purnendra Jangid</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="terminal">
-    <h2>> SOC Incident Response Cases</h2>
-    <p>
-      Experience as Executive – Information Security (SOC L1) at AU Small Finance
-      Bank, handling real-time monitoring, triage and escalation of security
-      incidents in a financial environment.
-    </p>
-  </div>
+    <canvas id="matrix-bg"></canvas>
+    
+    <nav class="neon-nav">
+        <ul>
+            <li><a href="index.html">/ROOT</a></li>
+            <li><a href="pentest.html">/RED_TEAM</a></li>
+            <li><a href="soc.html" class="active">/BLUE_TEAM</a></li>
+            <li><a href="hall.html">/HALL_OF_FAME</a></li>
+            <li><a href="contact.html">/COMMS</a></li>
+        </ul>
+    </nav>
 
-  <div class="wrapper">
+    <div class="timeline-container">
+        <h1 class="glitch" data-text="INCIDENT_RESPONSE_LOG">INCIDENT_RESPONSE_LOG</h1>
+        
+        <div style="border: 1px solid var(--neon-cyan); padding: 10px; margin-bottom: 2rem; background: rgba(0,20,20,0.8);">
+            <span style="color: var(--neon-cyan); margin-right: 20px;">>> CURRENT_STATUS: <span style="color:#0f0; animation: blink 1s infinite;">ACTIVE</span></span>
+            <span style="color: var(--neon-cyan);">>> ROLE: SOC_ANALYST_L1</span>
+        </div>
 
-    <div class="card">
-      <div class="card-title">Phishing Email Triage & User Compromise</div>
-      <div class="card-meta">Use-case: Email security · SIEM + EDR</div>
-      <p>
-        Analysed alerts for suspicious links and attachments reported by the
-        secure email gateway. Correlated with proxy, DNS and EDR telemetry to
-        determine whether payload execution or credential harvesting occurred.
-      </p>
-      <p>
-        Escalated confirmed cases with IOC set (domains, IPs, hashes) and
-        recommended mailbox search plus password reset actions.
-      </p>
-      <span class="tag">Phishing</span>
-      <span class="tag">Email Gateway</span>
-      <span class="tag">EDR</span>
+        <div class="timeline">
+            
+            <div class="log-entry" style="border-left: 4px solid #0f0;">
+                <span class="timestamp">[PRESENT - CURRENTLY ACTIVE]</span>
+                <h3>Executive – Information Security (SOC L1)</h3>
+                <p class="console-text">>> ORG: AU SMALL FINANCE BANK</p>
+                <br>
+                <p><strong>Mission Profile:</strong> Handling real-time monitoring, triage, and escalation of security incidents within a critical financial environment.</p>
+                <ul style="margin-top: 10px; padding-left: 20px; color: #ccc; font-size: 0.9rem;">
+                    <li>>> <strong>Real-time Monitoring:</strong> 24/7 surveillance of SIEM alerts and network traffic anomalies.</li>
+                    <li>>> <strong>Triage & Analysis:</strong> Investigating potential breaches, distinguishing false positives from true threats.</li>
+                    <li>>> <strong>Documentation:</strong> Creating detailed incident reports and maintaining audit trails for compliance.</li>
+                </ul>
+                <br>
+                <div class="tags">
+                    <span class="log-tag">SIEM</span>
+                    <span class="log-tag">FINANCIAL_SEC</span>
+                    <span class="log-tag">INCIDENT_RESPONSE</span>
+                </div>
+            </div>
+
+            <div class="log-entry">
+                <span class="timestamp">[MAY 2023 - SEP 2023]</span>
+                <h3>Ransomware Malware Analyst</h3>
+                <p class="console-text">>> ORG: Employability.life</p>
+                <p>Performed static and dynamic analysis of ransomware samples to understand encryption behaviors and kill-chains.</p>
+                <br>
+                <div class="tags">
+                    <span class="log-tag">MALWARE_ANALYSIS</span>
+                    <span class="log-tag">FORENSICS</span>
+                </div>
+            </div>
+
+             <div class="log-entry">
+                <span class="timestamp">[2021 - 2024]</span>
+                <h3>Cyber Security Specialization</h3>
+                <p class="console-text">>> INST: JECRC University</p>
+                <p>Built foundational skills in Network Security, Cryptography, and Ethical Hacking.</p>
+                <br>
+                <div class="tags">
+                    <span class="log-tag">BCA</span>
+                    <span class="log-tag">TRAINING</span>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <div class="card">
-      <div class="card-title">Malware Beacon Detection</div>
-      <div class="card-meta">Use-case: C2 traffic anomalies</div>
-      <p>
-        Investigated SIEM alerts triggered by unusual outbound connections and
-        DNS patterns. Correlated events with EDR process trees to identify
-        suspicious binaries and persistence mechanisms.
-      </p>
-      <p>
-        Contained endpoints by isolating them, collected artifacts and
-        coordinated with L2 for deeper forensic analysis.
-      </p>
-      <span class="tag">C2</span>
-      <span class="tag">SIEM</span>
-      <span class="tag">IR Workflow</span>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Policy Violation & Privilege Misuse</div>
-      <div class="card-meta">Use-case: UEBA / access monitoring</div>
-      <p>
-        Monitored alerts related to unusual login patterns and privilege
-        escalations. Performed initial investigation, validated against change
-        requests and escalated risky activity to compliance and security teams.
-      </p>
-      <span class="tag">UEBA</span>
-      <span class="tag">Access Monitoring</span>
-      <span class="tag">Banking Security</span>
-    </div>
-
-  </div>
-
-  <nav class="nav">
-    <a href="index.html">← Back to Console</a>
-  </nav>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

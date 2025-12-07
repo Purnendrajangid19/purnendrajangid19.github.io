@@ -1,0 +1,35 @@
+body {
+  background: #000;
+  color: #00ff9e;
+  font-family: 'Fira Code', monospace;
+  padding: 40px;
+  text-shadow: 0 0 8px #00ff9e;
+}
+
+.terminal {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.access {
+  color: #00e1ff;
+  text-shadow: 0 0 10px #00e1ff;
+  font-weight: bold;
+}
+
+.nav {
+  margin-top: 60px;
+  border-top: 1px solid #00ff9e;
+  padding-top: 20px;
+}
+
+.nav a {
+  margin-right: 18px;
+  text-decoration: none;
+  color: #00e1ff;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-shadow: 0 0 12px #00e1ff, 0 0 16px #00ff9e;
+}

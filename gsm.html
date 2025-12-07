@@ -8,64 +8,65 @@
 <body>
   <div class="terminal">
     <h2>> GSM Signal Analysis & SDR Capture</h2>
+
     <p>
       Independent research on real-world GSM networks using RTL-SDR Blog V4 and
       open-source tooling such as GR-GSM, Gqrx and Wireshark. All captures are
-      performed in a lab/controlled environment with subscriber identifiers
+      performed in a lab / controlled environment with subscriber identifiers
       fully redacted.
+    </p>
+
+    <p><strong>Broadcast Channel (BCCH) Mapping</strong><br>
+      Tools: RTL-SDR V4, Gqrx, GR-GSM<br>
+      Captured downlink spectrum and identified active ARFCNs. Decoded BCCH
+      bursts to enumerate cell IDs, LACs and broadcast parameters, focusing on
+      ciphering indicators, network feature flags and handover configurations.
+    </p>
+
+    <p><strong>Encryption Posture Review</strong><br>
+      Analysed system information messages to determine whether the operator
+      permits unencrypted traffic (A5/0) or weak ciphers. Documented where
+      legacy configurations are still allowed, increasing risk to subscribers.
+    </p>
+
+    <p><strong>GSM → SOC Correlation Ideas</strong><br>
+      Exploring how SDR-derived indicators (suspicious BTS behaviour, rogue cell
+      parameters) could be translated into telemetry consumable by SIEM / SOC
+      pipelines for detecting potential IMSI-catchers or fake BTS activity.
     </p>
   </div>
 
   <div class="wrapper">
-
+    <!-- 🔗 Research notes page -->
     <div class="card">
-      <div class="card-title">Broadcast Channel (BCCH) Mapping</div>
-      <div class="card-meta">Tools: RTL-SDR V4, Gqrx, GR-GSM</div>
+      <div class="card-title">📓 Full GSM Research Notes (Live Site)</div>
+      <div class="card-meta">All experiments · logs · diagrams</div>
       <p>
-        Captured downlink spectrum and identified active ARFCNs. Decoded BCCH
-        bursts to enumerate cell IDs, LACs and broadcast parameters.
+        Detailed write-ups, diagrams and logs from my GSM experiments are
+        published on a dedicated notes site:
       </p>
       <p>
-        Focused on security-relevant fields such as ciphering indicators, network
-        feature flags and handover configurations.
+        👉 <a href="https://purnendrajangid19.github.io/GSM-Research/GSM_website_notes.html" target="_blank">
+          Open GSM Research Notes
+        </a>
       </p>
-      <span class="tag">ARFCN</span>
-      <span class="tag">BCCH</span>
-      <span class="tag">GSM900</span>
+      <span class="tag">Field Notes</span>
+      <span class="tag">Experiments</span>
+      <span class="tag">Documentation</span>
     </div>
 
+    <!-- 🧬 GitHub repo card -->
     <div class="card">
-      <div class="card-title">Encryption Posture Review</div>
-      <div class="card-meta">A5/x cipher usage observation</div>
+      <div class="card-title">📡 GSM-Research Repository</div>
+      <div class="card-meta">GitHub · RTL-SDR · GR-GSM · Telecom Security</div>
       <p>
-        Analysed system information messages to determine whether the operator
-        permits unencrypted traffic or weak ciphers. Documented where A5/0 or
-        legacy configurations are still allowed, increasing risk to subscribers.
+        Source for the GSM notes site, scripts, captures and supporting
+        material is hosted in the public repository:
       </p>
-      <span class="tag">A5/0</span>
-      <span class="tag">A5/1</span>
-      <span class="tag">Network Hardening</span>
-    </div>
-
-    <div class="card">
-      <div class="card-title">GSM → SOC Correlation Ideas</div>
-      <div class="card-meta">Bridging telecom RF with blue-team monitoring</div>
       <p>
-        Exploring how SDR-derived indicators (suspicious BTS behaviour, rogue
-        cell parameters) could be translated into telemetry consumable by SIEM /
-        SOC pipelines for detecting potential IMSI-catchers or fake BTS activity.
+        👉 <a href="https://github.com/Purnendrajangid19/GSM-Research" target="_blank">
+          github.com/Purnendrajangid19/GSM-Research
+        </a>
       </p>
-      <span class="tag">SDR</span>
-      <span class="tag">Threat Hunting</span>
-      <span class="tag">Telecom Security</span>
-    </div>
-
-  </div>
-
-  <nav class="nav">
-    <a href="index.html">← Back to Console</a>
-  </nav>
-
-  <script src="script.js"></script>
-</body>
-</html>
+      <p>
+        The repository incl

@@ -33,3 +33,14 @@ body {
 .nav a:hover {
   text-shadow: 0 0 12px #00e1ff, 0 0 16px #00ff9e;
 }
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;      /* push matrix behind everything */
+  opacity: 0.28;    /* reduce glow strength */
+  pointer-events: none;
+}

@@ -6,116 +6,81 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header / intro -->
-  <div class="terminal">
-    <h2>Hall of Fame & Recognition</h2>
 
+<div class="terminal">
+  <h2>Hall of Fame</h2>
+  <p>Formal acknowledgements and recognitions awarded for cybersecurity research, responsible disclosure and security testing initiatives.</p>
+</div>
+
+<!-- Neon Card Section -->
+<div class="wrapper">
+
+  <div class="card">
+    <div class="card-title">🏛 CERT-In & NCIICT Recognition</div>
+    <div class="card-meta">National Cyber Defence · Vulnerability Disclosure</div>
     <p>
-      A collection of acknowledgements and formal recognition received for
-      responsible disclosure, security research and contributions to
-      cybersecurity. This page highlights organisations that have trusted and
-      appreciated my work.
+      Acknowledged by India’s national cybersecurity agencies for disclosing vulnerabilities
+      impacting systems at national scale with proper documentation and remediation guidance.
     </p>
+    <span class="tag">National Security</span>
+    <span class="tag">CERT-In</span>
+    <span class="tag">NCIICT</span>
   </div>
 
-  <!-- Cards -->
-  <div class="wrapper">
-
-    <!-- CERT-In / NCIICT -->
-    <div class="card">
-      <div class="card-title">🏛 National Cybersecurity Recognition</div>
-      <div class="card-meta">CERT-In &amp; NCIICT</div>
-      <p>
-        Formally acknowledged by India’s national agencies CERT-In and NCIICT
-        for contributing to national cybersecurity through responsible
-        disclosure of vulnerabilities affecting critical systems.
-      </p>
-      <span class="tag">National Level</span>
-      <span class="tag">Responsible Disclosure</span>
-    </div>
-
-    <!-- JECRC ERP SQLi -->
-    <div class="card">
-      <div class="card-title">🏫 JECRC University – Letter of Appreciation</div>
-      <div class="card-meta">Critical ERP SQL Injection</div>
-      <p>
-        Identified a critical SQL injection vulnerability in JECRC University’s
-        ERP system that exposed sensitive internal information about students
-        and the organisation. Submitted a detailed report with PoC and
-        remediation steps and received an official Letter of Appreciation from
-        the university.
-      </p>
-      <span class="tag">SQLi</span>
-      <span class="tag">ERP Security</span>
-      <span class="tag">Appreciation Letter</span>
-    </div>
-
-    <!-- NASA subdomain -->
-    <div class="card">
-      <div class="card-title">🚀 NASA Subdomain Vulnerability Disclosure</div>
-      <div class="card-meta">Web Application Security · XSS / CSRF</div>
-      <p>
-        Discovered and responsibly reported a security issue on a NASA
-        subdomain, demonstrating impact on session integrity and user actions.
-        The finding showcased advanced web application testing skills and
-        careful handling of high-value targets.
-      </p>
-      <span class="tag">NASA</span>
-      <span class="tag">Web Security</span>
-      <span class="tag">XSS / CSRF</span>
-    </div>
-
-    <!-- Google Android badge -->
-    <div class="card">
-      <div class="card-title">📱 Google Android Vulnerability Badge</div>
-      <div class="card-meta">Android Security Reporting</div>
-      <p>
-        Reported a valid security issue affecting an Android component in
-        accordance with Google’s security reporting guidelines and was awarded
-        an official badge in recognition of the contribution.
-      </p>
-      <span class="tag">Google</span>
-      <span class="tag">Android Security</span>
-      <span class="tag">Badge</span>
-    </div>
-
-    <!-- Bug bounty / platforms -->
-    <div class="card">
-      <div class="card-title">💻 Bug Bounty &amp; Platform Acknowledgements</div>
-      <div class="card-meta">HackerOne · Bugcrowd · ProjectDiscovery</div>
-      <p>
-        Participated in public bug bounty and community programs, reporting
-        vulnerabilities such as IDOR, access control issues and
-        misconfigurations. Some findings have been acknowledged by platforms
-        like ProjectDiscovery and other security communities.
-      </p>
-      <span class="tag">Bug Bounty</span>
-      <span class="tag">Community</span>
-      <span class="tag">Web Security</span>
-    </div>
-
-    <!-- Other notable mentions -->
-    <div class="card">
-      <div class="card-title">🔐 Other Notable Mentions</div>
-      <div class="card-meta">Ongoing research &amp; practical impact</div>
-      <p>
-        Additional recognition includes appreciation from industry mentors and
-        organisations for work on GSM security, ransomware analysis and SOC
-        operations, as well as feedback contributions to security tooling and
-        research projects.
-      </p>
-      <span class="tag">GSM Research</span>
-      <span class="tag">Malware Analysis</span>
-      <span class="tag">SOC Ops</span>
-    </div>
-
+  <div class="card">
+    <div class="card-title">🏫 JECRC University Appreciation</div>
+    <div class="card-meta">Critical ERP SQL Injection Exposure</div>
+    <p>
+      Reported a serious SQL injection flaw in the university ERP system exposing internal student
+      records and administrative details. Awarded with a formal Letter of Appreciation.
+    </p>
+    <span class="tag">SQL Injection</span>
+    <span class="tag">ERP Security</span>
+    <span class="tag">Letter of Appreciation</span>
   </div>
 
-  <!-- Back nav -->
-  <nav class="nav">
-    <a href="index.html">&lt; Back to Console</a>
-  </nav>
+  <div class="card">
+    <div class="card-title">🚀 NASA Vulnerability Disclosure</div>
+    <div class="card-meta">Web Application Integrity · XSS/CSRF</div>
+    <p>
+      Successfully identified weakness on NASA subdomain affecting session integrity and security.
+      Demonstrated professional testing and responsible reporting standards.
+    </p>
+    <span class="tag">NASA</span>
+    <span class="tag">XSS / CSRF</span>
+    <span class="tag">Responsible Disclosure</span>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="card">
+    <div class="card-title">📱 Google Android Badge</div>
+    <div class="card-meta">Mobile Security Research</div>
+    <p>
+      Awarded a badge from Google for responsibly reporting a valid Android security issue
+      within Google's coordinated vulnerability disclosure framework.
+    </p>
+    <span class="tag">Android Security</span>
+    <span class="tag">Google Recognition</span>
+    <span class="tag">Mobile Research</span>
+  </div>
+
+  <div class="card">
+    <div class="card-title">💻 Security Community Acknowledgements</div>
+    <div class="card-meta">HackerOne · Bugcrowd · ProjectDiscovery</div>
+    <p>
+      Recognized for valid submissions on various security platforms including IDOR exploitation,
+      authentication bypasses and access control weaknesses.
+    </p>
+    <span class="tag">Bug Bounty</span>
+    <span class="tag">Web Exploitation</span>
+    <span class="tag">Research Recognition</span>
+  </div>
+
+</div>
+
+<nav class="nav">
+  <a href="index.html">&lt; Back to Console</a>
+</nav>
+
+<script src="script.js"></script>
 </body>
 </html>

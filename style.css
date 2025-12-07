@@ -116,3 +116,15 @@ body::before {
     font-size: 20px;
   }
 }
+
+
+/* typing cursor */
+#terminal::after {
+  content: "|";
+  color: #00ff9e;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
